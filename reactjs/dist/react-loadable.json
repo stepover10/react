@@ -1,0 +1,574 @@
+{
+  "prop-types": [
+    {
+      "id": 0,
+      "name": "./node_modules/prop-types/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 0,
+      "name": "./node_modules/prop-types/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 0,
+      "name": "./node_modules/prop-types/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "undefined": [
+    {
+      "id": "",
+      "name": null,
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 26,
+      "name": null,
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "react": [
+    {
+      "id": 1,
+      "name": "./node_modules/react/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 1,
+      "name": "./node_modules/react/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 1,
+      "name": "./node_modules/react/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "warning": [
+    {
+      "id": 2,
+      "name": "./node_modules/history/node_modules/warning/browser.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 4,
+      "name": "./node_modules/warning/warning.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 2,
+      "name": "./node_modules/history/node_modules/warning/browser.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 4,
+      "name": "./node_modules/warning/warning.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 2,
+      "name": "./node_modules/history/node_modules/warning/browser.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    },
+    {
+      "id": 4,
+      "name": "./node_modules/warning/warning.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "invariant": [
+    {
+      "id": 3,
+      "name": "./node_modules/invariant/browser.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 3,
+      "name": "./node_modules/invariant/browser.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 3,
+      "name": "./node_modules/invariant/browser.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "history": [
+    {
+      "id": 5,
+      "name": "./node_modules/history/es/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 5,
+      "name": "./node_modules/history/es/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 5,
+      "name": "./node_modules/history/es/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "react-router/es/matchPath": [
+    {
+      "id": 6,
+      "name": "./node_modules/react-router/es/matchPath.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 6,
+      "name": "./node_modules/react-router/es/matchPath.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 6,
+      "name": "./node_modules/react-router/es/matchPath.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "react-router/es/Route": [
+    {
+      "id": 7,
+      "name": "./node_modules/react-router/es/Route.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 7,
+      "name": "./node_modules/react-router/es/Route.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 7,
+      "name": "./node_modules/react-router/es/Route.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "path-to-regexp": [
+    {
+      "id": 8,
+      "name": "./node_modules/path-to-regexp/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 8,
+      "name": "./node_modules/path-to-regexp/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 8,
+      "name": "./node_modules/path-to-regexp/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./Link": [
+    {
+      "id": 9,
+      "name": "./node_modules/react-router-dom/es/Link.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 9,
+      "name": "./node_modules/react-router-dom/es/Link.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 9,
+      "name": "./node_modules/react-router-dom/es/Link.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "object-assign": [
+    {
+      "id": 10,
+      "name": "./node_modules/object-assign/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 10,
+      "name": "./node_modules/object-assign/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 10,
+      "name": "./node_modules/object-assign/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./Route": [
+    {
+      "id": 11,
+      "name": "./node_modules/react-router-dom/es/Route.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 11,
+      "name": "./node_modules/react-router-dom/es/Route.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 11,
+      "name": "./node_modules/react-router-dom/es/Route.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "react-dom": [
+    {
+      "id": 12,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 12,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 12,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./cjs/react.production.min.js": [
+    {
+      "id": 13,
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 13,
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 13,
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./cjs/react-dom.production.min.js": [
+    {
+      "id": 14,
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 14,
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 14,
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "scheduler": [
+    {
+      "id": 15,
+      "name": "./node_modules/scheduler/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 15,
+      "name": "./node_modules/scheduler/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 15,
+      "name": "./node_modules/scheduler/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./cjs/scheduler.production.min.js": [
+    {
+      "id": 16,
+      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 16,
+      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 16,
+      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./../../webpack/buildin/global.js": [
+    {
+      "id": 17,
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 17,
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 17,
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./factoryWithThrowingShims": [
+    {
+      "id": 18,
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 18,
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 18,
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./lib/ReactPropTypesSecret": [
+    {
+      "id": 19,
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 19,
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 19,
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "isarray": [
+    {
+      "id": 20,
+      "name": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 20,
+      "name": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 20,
+      "name": "./node_modules/path-to-regexp/node_modules/isarray/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "./Switch": [
+    {
+      "id": 21,
+      "name": "./node_modules/react-router-dom/es/Switch.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 21,
+      "name": "./node_modules/react-router-dom/es/Switch.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 21,
+      "name": "./node_modules/react-router-dom/es/Switch.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "react-loadable": [
+    {
+      "id": 22,
+      "name": "./node_modules/react-loadable/lib/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 22,
+      "name": "./node_modules/react-loadable/lib/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    }
+  ],
+  "hoist-non-react-statics": [
+    {
+      "id": 25,
+      "name": "./node_modules/@loadable/component/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 25,
+      "name": "./node_modules/@loadable/component/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    },
+    {
+      "id": 24,
+      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "react-is": [
+    {
+      "id": 27,
+      "name": "./node_modules/react-is/index.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 27,
+      "name": "./node_modules/react-is/index.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    }
+  ],
+  "./cjs/react-is.production.min.js": [
+    {
+      "id": 28,
+      "name": "./node_modules/react-is/cjs/react-is.production.min.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 28,
+      "name": "./node_modules/react-is/cjs/react-is.production.min.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    }
+  ],
+  "./main.scss": [
+    {
+      "id": 29,
+      "name": "./src/main/main.scss",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 29,
+      "name": "./src/main/main.scss",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    }
+  ],
+  "/Users/stepover10/Desktop/dev_stepover/About-Me/reactjs/dev-server-side-rendering/src/main/main.js": [
+    {
+      "id": 30,
+      "name": "./src/main/main.js",
+      "file": "main/main.css",
+      "publicPath": "main/main.css"
+    },
+    {
+      "id": 30,
+      "name": "./src/main/main.js",
+      "file": "main/main.js",
+      "publicPath": "main/main.js"
+    }
+  ],
+  "react-router-dom": [
+    {
+      "id": 23,
+      "name": "./node_modules/react-router-dom/es/index.js",
+      "file": "vendor/vendor.js",
+      "publicPath": "vendor/vendor.js"
+    }
+  ],
+  "../pages/about/About": [
+    {
+      "id": 32,
+      "name": "./src/pages/about/About.js",
+      "file": "2/2.chunk.js",
+      "publicPath": "2/2.chunk.js"
+    }
+  ],
+  "../pages/home/Home": [
+    {
+      "id": 31,
+      "name": "./src/pages/home/Home.js",
+      "file": "3/3.chunk.js",
+      "publicPath": "3/3.chunk.js"
+    }
+  ]
+}

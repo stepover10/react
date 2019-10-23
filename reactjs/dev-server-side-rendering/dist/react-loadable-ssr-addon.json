@@ -1,0 +1,59 @@
+{
+  "entrypoints": [
+    "layout"
+  ],
+  "origins": {
+    "../pages/about/About": [
+      0
+    ],
+    "../pages/home/Home": [
+      1
+    ],
+    "layout": [
+      "vendors",
+      "layout"
+    ],
+    "vendors": [
+      "layout",
+      "vendors"
+    ]
+  },
+  "assets": {
+    "0": {
+      "js": [
+        {
+          "file": "0/0.chunk.js",
+          "hash": "52a561f30ac5ad5857fc",
+          "publicPath": "0/0.chunk.js"
+        }
+      ]
+    },
+    "1": {
+      "js": [
+        {
+          "file": "1/1.chunk.js",
+          "hash": "036e299e1c20d581809b",
+          "publicPath": "1/1.chunk.js"
+        }
+      ]
+    },
+    "layout": {
+      "js": [
+        {
+          "file": "layout/layout.js",
+          "hash": "70b6a2aa0882059adcc2",
+          "publicPath": "layout/layout.js"
+        }
+      ]
+    },
+    "vendors": {
+      "js": [
+        {
+          "file": "vendors/vendors.chunk.js",
+          "hash": "3e516d0e83b6b4c2d73f",
+          "publicPath": "vendors/vendors.chunk.js"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "scripts": {
+        "server": "node ./server/server.js",
+        "build": "next build ./src",
+        "dev": "next ./src"
+    },
+    "dependencies": {
+        "@yolkai/next-routes": "^3.0.0",
+        "@zeit/next-sass": "^1.0.1",
+        "@zeit/next-typescript": "^1.1.1",
+        "express": "^4.17.1",
+        "next": "^9.0.0",
+        "next-compose-plugins": "^2.2.0",
+        "node-sass": "^4.12.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+        "@types/node": "^12.0.12",
+        "@types/react": "^16.8.23",
+        "typescript": "^3.5.2"
+    }
+}
