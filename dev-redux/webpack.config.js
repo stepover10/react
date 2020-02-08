@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
     const config = {
         entry: {
             // vendor: ["react", "react-dom"],
-            index  : PATH_SOURCE + '/index/Layout.js',
+            index  : PATH_SOURCE + '/index/index.js',
             // root   : PATH_SOURCE + '/root/root.jsx',
             // layout : PATH_SOURCE + '/shared/layout.jsx',
         },
