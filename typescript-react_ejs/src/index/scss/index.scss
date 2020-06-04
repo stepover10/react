@@ -1,0 +1,570 @@
+html{
+   background: #f7f7f7;
+}
+
+#communityWrap{
+   width: 1080px;
+   margin: 20px auto;
+   background: #fff;
+
+   a{
+      cursor: pointer;
+      text-decoration: none;
+      color: #000;
+   }
+
+   select{
+      font-size: 13px;
+      color: #414141;
+      background: #fff;
+      border: 1px solid #e7e7e7;
+      border-radius: 0;
+      padding: 0 7px;
+   }
+
+   input{
+      font-size: 13px;
+      color: #414141;
+   }
+
+   .select-arrow{
+      background: #fff url(/templates/layout/images/seleted_arrow.png) no-repeat right 2px center !important;
+      background-size: 15px !important;
+      -webkit-appearance: none !important;
+   }
+
+   .mb-10{
+      margin-bottom: 10px !important;
+   }
+
+   .mr-10{
+      margin-right: 10px !important;
+   }
+
+   .bdColor-efefef{
+      border: 1px solid #efefef !important;
+   }
+
+   .common-ul-li{
+      display: inline-block;
+
+      li{
+         display: inline-block;
+         font-size: 12px;
+      }
+   }
+
+   .mz-ct-frame{
+
+      float: left;
+      vertical-align: top;
+      overflow: hidden;
+
+      .mz-community-header{
+         background: #17aa51;
+         height: 125px;
+         padding: 30px 40px;
+         color: #fff;
+
+         h1{
+            display: block;
+            font-size: 35px;
+            margin: 3px 0 9px;
+         }
+
+         .mz-h-sub{
+            font-weight: 300;
+            font-size: 14px;
+         }
+      }
+
+      .mz-side-menu{
+         background: #fff;
+         width: 145px;
+         padding: 10px;
+         float: left;
+
+         .side-top{
+            text-align: center;
+            margin: 30px 0;
+         }
+
+         .side-list{
+            h1{
+               margin: 20px 0 0;
+               font-size: 15px;
+               padding: 20px 14px;
+               border-bottom: 1px solid #17aa50;
+               color: #696969;
+            }
+
+            ul{
+               li{
+                  display: block;
+                  padding: 0 14px;
+                  border-bottom: 1px solid #f8f8f8;
+
+                  a{
+                     font-size: 14px;
+                     color: #888888;
+                     text-decoration: none;
+                     height: 55px;
+                     line-height: 55px;
+                  }
+               }
+            }
+         }
+
+      }
+
+      .mz-content{
+         float: left;
+         width: 710px;
+
+         h1{
+            font-size: 15px;
+            font-weight: bold
+         }
+
+         h2{
+            font-size: 12px;
+            font-weight: normal;
+         }
+
+         .mz-content-ad-banner{
+            width: 100%;
+            height: 90px;
+            margin: 0 0 10px;
+            background: #efefef;
+         }
+
+
+         // 최근 본 게시판 영역 시작
+         .mz-content-recent{
+            margin: 0 0 10px;
+            border-bottom: 1px solid #000;
+            background: #fff;
+
+            .recent-header{
+               border-bottom: 1px solid #ddd;
+               padding: 20px;
+
+               h2{
+                  font-size: 17px;
+                  display: inline-block;
+                  margin-right: 20px;
+               }
+
+               ul{
+                  li{
+                     font-size: 13px;
+
+                     a{
+                        display: block;
+                        text-align: center;
+                        width: 40px;
+                        color: #b0b0b0;
+                     }
+                  }
+
+                  li.bd{
+                     border-right: 1px solid #b0b0b0;
+                  }
+
+                  li.active{
+                     a{
+                        color: #17aa50;
+                     }
+                  }
+               }
+            }
+
+            .recent-mz-boards{
+               padding: 23px 23px 20px 23px;
+
+               .cm-recent-view{
+                  display: inline-block;
+                  width: 49%;
+
+                  ul{
+                     li{
+                        position: relative;
+                        height: 26px;
+                        line-height: 26px;
+                        padding: 0 0 0 10px;
+
+                        a{
+                           font-size: 14px;
+                           color: #363636;
+
+                           &:hover{
+                              text-decoration: underline;
+                              color: #000;
+                           }
+                        }
+
+                        &:before{
+                           content: '';
+                           display: inline-block;
+                           width: 3px;
+                           height: 3px;
+                           background: #bbb;
+                           position: absolute;
+                           top: 13px;
+                           left: 0;
+                        }
+                     }
+                  }
+               }
+            }
+
+         }
+
+         // 최근 본 게시판 영역 끝
+
+         .mz-selected-menu-board{
+            background: #fff;
+
+            .mz-selected-body{
+               padding: 0 23px;
+
+               .mz-board-search{
+                  text-align: center;
+                  padding: 35px 0;
+
+                  .select-box{
+                     vertical-align: top;
+                     display: inline-block;
+
+                     select{
+                        height: 31px;
+                        width: 120px;
+                     }
+                  }
+
+                  input{
+                     width: 265px;
+                     height: 29px;
+                     vertical-align: top;
+                     padding: 0 8px;
+                     font-size: 13px;
+                     background: #fff;
+                     border: 1px solid #e7e7e7;
+                     border-radius: 0;
+                  }
+
+                  button{
+                     padding: 0;
+                     border: none;
+                     height: 0;
+                     margin: 0;
+                     font-size: 0;
+                  }
+               }
+
+
+               .mz-sed-header{
+                  margin-bottom: 10px;
+
+                  .mz-current-board{
+                     display: inline-block;
+
+                     h2{
+                        font-size: 14px;
+                        color: #8f8f8f;
+                        display: inline-block;
+                        margin-right: 10px;
+                     }
+
+                     select{
+                        width: 115px;
+                        height: 32px;
+                     }
+                  }
+
+                  .mz-s-right{
+                     font-size: 12px;
+                     float: right;
+
+                     span{
+                        display: inline-block;
+                        vertical-align: top;
+                        line-height: 34px;
+                        margin: 0 6px 0;
+
+                        a{
+                           color: #8f8f8f;
+                           font-size: 14px
+                        }
+                     }
+
+                     a.mz-write-btn{
+                        display: inline-block;
+                     }
+                  }
+               }
+
+            }
+
+            .mz-table-wrap{
+               .mz-table{
+                  width: 100%;
+                  text-align: center;
+                  border-collapse: collapse;
+                  border-bottom: 1px solid #8bd4a7;
+
+                  th{
+                     font-size: 16px;
+                     color: #292929;
+                     height: 55px;
+                     line-height: 55px;
+                     background: #fff;
+                     border-top: 1px solid #17aa50;
+                     border-bottom: 1px solid #8bd4a7;
+                  }
+
+                  tr{
+                     font-size: 14px;
+                     color: #666;
+                     height: 30px;
+                     //border-bottom: 1px solid #eee;
+                     height: 36px;
+                     line-height: 37px;
+
+                     a{
+                        text-decoration: none;
+
+                        &:hover{
+                           text-decoration: underline;
+                        }
+                     }
+
+                     &:hover{
+                        background: #f7f7f7;
+                     }
+                  }
+
+                  t-left{
+                     text-align: left;
+                  }
+               }
+
+               .pagination{
+                  text-align: center;
+                  padding: 35px 0 55px;
+
+                  .page-arr{
+                     display: inline-block;
+                     min-width: 30px;
+                     height: 30px;
+                     line-height: 28px;
+                     padding: 0 10px;
+                     background-repeat: no-repeat;
+                     text-align: center;
+                     color: #555;
+                     font-size: 12px;
+                     margin: 0 -5px 0 0;
+
+                     &:hover{
+                        border-bottom: 1px solid #444;
+                     }
+                  }
+
+                  .page-arr-l{
+                     background-image: url("/templates/layout/images/mz_table_arr_left.jpg");
+                  }
+
+                  .page-arr-r{
+                     background-image: url("/templates/layout/images/mz_table_arr_right.jpg");
+                  }
+
+                  .prev-a-d{
+                     background-position: 0 0;
+                  }
+
+                  .prev-a{
+                     background-position: -29px 0;
+                  }
+
+                  .next-a-d{
+                     background-position: 0 0;
+                  }
+
+                  .next-a{
+                     background-position: -29px 0;
+                  }
+
+                  ol{
+                     display: inline-block;
+                     vertical-align: top;
+                     margin: 0 8px;
+
+                     li{
+                        display: inline-block;
+
+                        a{
+                           display: block;
+                           min-width: 28px;
+                           height: 28px;
+                           line-height: 28px;
+                           padding: 0 10px;
+                           background-color: #fff;
+                           text-align: center;
+                           color: #737373;
+                           font-size: 12px;
+                           cursor: pointer;
+
+                           &:hover{
+                              color: #000;
+                              text-decoration: underline;
+                           }
+                        }
+                     }
+                  }
+
+               }
+            }
+         }
+      }
+
+      .mz-ct-right{
+         float: right;
+         vertical-align: top;
+         padding-right: 2px;
+         width: 205px;
+         overflow: hidden;
+
+         .mz-right-ad-banner{
+            width: 100%;
+            height: 250px;
+            background: #efefef;
+            margin: 0 0 5px;
+         }
+
+         .mz-right-bottom{
+
+            h2{
+               font-size: 14px;
+               margin-bottom: 10px;
+            }
+
+            .mz-health-focus{
+               padding: 15px;
+               background: #fff;
+
+               .health-days{
+                  overflow: hidden;
+                  margin-bottom: 10px;
+
+                  ul{
+                     li{
+                        display: inline-block;
+                        width: 33.3%;
+                        float: left;
+                        text-align: center;
+                        border-top: 1px solid #ddd;
+                        border-bottom: 1px solid #ddd;
+                        height: 30px;
+                        line-height: 30px;
+
+                        a{
+                           font-size: 12px;
+                        }
+                     }
+
+                     li.active{
+                        border-bottom: 1px solid #000;
+                     }
+                  }
+               }
+
+               .mz-health-focus-news-list{
+                  ul{
+                     li{
+                        display: block;
+                        height: 30px;
+                        line-height: 30px;
+
+                        a{
+                           font-size: 12px;
+
+                           span{
+                              display: inline-block;
+                              color: #17aa50;
+                              font-weight: bold;
+                              width: 20px;
+                           }
+                        }
+                     }
+                  }
+               }
+
+            }
+
+            .mz-reporter{
+               padding: 15px;
+               background: #fff;
+
+               .report-img-text{
+                  overflow: hidden;
+                  margin-bottom: 10px;
+                  .r-col{
+                     display: inline-block;
+                     width: 50%;
+                     float: left;
+                  }
+
+                  .r-col-l{
+                     padding-right: 5px;
+                  }
+
+                  .r-img{
+                     width: 100%;
+                     height: 70px;
+                     background: #ddd;
+                  }
+
+                  .r-text{
+                     h3{
+                        font-size: 13px;
+                        color: #1f1f1f;
+                        margin-bottom: 5px;
+                     }
+                     span{
+                        font-size: 13px;
+                        color: #797979;
+                     }
+                  }
+               }
+
+               .report-list{
+                  ul{
+                     li{
+                        position: relative;
+                        padding: 0 0 0 10px;
+
+                        &:before{
+                           content: '';
+                           display: inline-block;
+                           width: 3px;
+                           height: 3px;
+                           background: #bbb;
+                           position: absolute;
+                           top: 6px;
+                           left: 0;
+                        }
+
+                        a{
+                           font-size: 13px;
+                        }
+                     }
+                  }
+               }
+
+            }
+
+         }
+      }
+
+   }
+}

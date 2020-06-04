@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>닥플 커스텀</title>
+
+    <link rel="stylesheet" href="/dist/index/index.css" type="text/css"/>
+    <style>
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+</head>
+<body>
+
+    <div id="communityWrap">
+        <div id="communityWrapBody">
+
+            <!-- 컨텐츠 위치 -->
+            <div class="mz-ct-frame">
+
+                <div class="mz-community-header mb-10">
+                    <h1>무찌 커뮤니티</h1>
+                    <div class="mz-h-sub">
+                        Since 2000~  운영위원 : 레전드 , 청년의사 , 무찌가드
+                    </div>
+                </div>
+
+                <!-- 왼쪽 사이드 메뉴 시작 -->
+                <div class="mz-side-menu mr-10 bdColor-efefef">
+
+                    <div class="side-top">
+                        <div>
+                            <img src="/templates/layout/images/mz_left_logo.jpg" alt="닥플 무찌 커뮤니티 로고">
+                        </div>
+                    </div>
+
+
+                    <div class="side-list">
+                        <div class="like-menu">
+                            <h1>즐겨찾는 게시판</h1>
+                            <ul>
+                                <li><a href="#none">병원운영</a></li>
+                                <li><a href="#none">진료 Q&A</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-list">
+                            <h1>전체 글</h1>
+                            <ul>
+                                <li><a href="#none">전체글</a></li>
+                                <li><a href="#none">베스트</a></li>
+                                <li><a href="#none">시사토론</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 왼쪽 사이드 메뉴 끝 -->
+
+                <!-- 중앙 컨텐츠 시작 -->
+                <div class="mz-content mr-10">
+                    <div class="mz-content-ad-banner mb-10 bdColor-efefef">
+                        중앙 광고배너
+                    </div>
+
+
+                        <!-- 최근 많이본 게시글 시작 -->
+                        <div class="mz-content-recent mb-10 bdColor-efefef">
+                            <div class="recent-wrap">
+
+                                <div class="recent-header">
+                                    <h2>전체글 게시판</h2>
+                                    <ul class="common-ul-li">
+                                        <li class="bd active"><a href="#none">오늘</a></li>
+                                        <li class="bd"><a href="#none">주간</a></li>
+                                        <li><a href="#none">월간</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="recent-mz-boards">
+                                    <div class="cm-recent-view re-left">
+                                        <ul>
+                                            <li><a href="#none">[게시판명] 오버워치</a></li>
+                                            <li><a href="#none">[게시판명] 나는 골드다</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="cm-recent-view re-right">
+                                        <ul>
+                                            <li><a href="#none">[게시판명] 롤은</a></li>
+                                            <li><a href="#none">[게시판명] 다이아가 목표다</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    <!-- 최근 많이본 게시글 끝 -->
+
+
+                    <!-- 선택된 게시판 영역 시작 -->
+                    <div class="mz-selected-menu-board bdColor-efefef">
+                        <div class="mz-selected-body">
+
+                            <div class="mz-board-search">
+                                <form>
+                                    <div class="select-box">
+                                        <select class="select-arrow">
+                                            <option value="title">제목</option>
+                                            <option value="nickname">작성자</option>
+                                            <option value="content">내용</option>
+                                            <option value="bid">글번호</option>
+                                            <option value="uid">ID</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="select-box">
+                                        <input type="text" name="keyword" class="inputform" maxlength="30" value="" title="검색어 입력" placeholder="검색어를 입력하세요">
+                                        <button type="submit" class="btn-search" onclick="">
+                                            <img src="/templates/layout/images/mz_search_btn.jpg" alt="검색하기">
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="mz-sed-header">
+                                <div class="mz-current-board">
+                                    <h2>전체 베스트</h2>
+                                    <select class="select-arrow">
+                                        <option value="30">30개씩 보기</option>
+                                        <option value="40">40개씩 보기</option>
+                                    </select>
+                                </div>
+
+                                <div class="mz-s-right">
+                                    <span>
+                                        <a href="#none">
+                                            + 게시판 운영방침
+                                        </a>
+                                    </span>
+                                    <a class="mz-write-btn">
+                                        <img src="/templates/layout/images/mz_board_write.jpg" alt="글쓰기">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mz-table-wrap">
+                                <table class="mz-table">
+                                    <thead>
+                                        <th>번호</th>
+                                        <th>제목</th>
+                                        <th>작성자</th>
+                                        <th>작성일</th>
+                                        <th>조회</th>
+                                        <th>좋아요</th>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="t-left"><a href="#none">뉴 무찌 커뮤니티 1</a></td>
+                                            <td>2019-05-05</td>
+                                            <td>작성자</td>
+                                            <td>151</td>
+                                            <td>11</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="t-left"><a href="#none">뉴 무찌 커뮤니티 2</a></td>
+                                            <td>2019-05-05</td>
+                                            <td>작성자</td>
+                                            <td>151</td>
+                                            <td>11</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="pagination">
+                                    <a href="#none" class="page-arr page-arr-l prev-a-d"></a>
+                                    <a href="#none" class="page-arr page-arr-l prev-a"></a>
+                                    <ol>
+                                        <li><a href="#none">1</a></li>
+                                        <li><a href="#none">2</a></li>
+                                    </ol>
+                                    <a href="#none" class="page-arr page-arr-r next-a"></a>
+                                    <a href="#none" class="page-arr page-arr-r next-a-d"></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 선택된 게시판 영역 끝 -->
+                </div>
+                <!-- 중앙 컨텐츠 끝 -->
+
+                <!-- 광고배너 / 뉴스 위치 -->
+                <div class="mz-ct-right">
+                    <div class="mz-right-ad-banner mb-10">
+                        오른쪽 광고배너
+                    </div>
+
+                    <div class="mz-right-bottom">
+
+                        <div class="mz-health-focus mb-10 bdColor-efefef">
+                            <h2>많이 본 뉴스</h2>
+                            <div class="health-days">
+                                <ul>
+                                    <li class="active"><a href="#none">오늘</a></li>
+                                    <li><a href="#none">주간</a></li>
+                                    <li><a href="#none">월간</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mz-health-focus-news-list">
+                                <ul>
+                                    <li><a href="#none"><span>1</span>뉴스 1</a></li>
+                                    <li><a href="#none"><span>2</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>3</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>4</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>5</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>6</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>7</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>8</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>9</span>뉴스 2</a></li>
+                                    <li><a href="#none"><span>10</span>뉴스 2</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="mz-reporter bdColor-efefef">
+                            <h2>기자수첩</h2>
+                            <div class="report-img-text">
+                                <div class="r-col r-col-l">
+                                    <div class="r-img"></div>
+                                </div>
+                                <div class="r-col">
+                                    <div class="r-text">
+                                        <h3>우리나라 푸르게 푸르게</h3>
+                                        <span>
+                                            동해물과 백두산이 마르고
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="report-list">
+                                <ul>
+                                    <li><a href="#none">지역사회</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+        
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
