@@ -16,7 +16,8 @@ const actionCreators = {
 	login: userActions.login
 };
 
-class App extends Component {
+@connect(storeProps, actionCreators)
+export default class App extends Component {
 	state = {
 		InSigned: false
 	}
@@ -56,5 +57,3 @@ class App extends Component {
 
 	}
 }
-
-export default connect(storeProps, actionCreators)(App);
