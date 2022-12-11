@@ -1,0 +1,26 @@
+overwrite: true
+schema:
+  - ${SCHEMA_PATH:https://xen-api.lnkr.cc/graphql} # 로컬 api 를 바라봐야하는 경우 로컬로 수정
+documents:
+  - 'src/**/*.{ts,tsx}'
+generates:
+  ./src/app.modules/config/scheme.graphql:
+    plugins:
+      - 'schema-ast'
+  ./src/app.modules/config/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-query'
+    config:
+      fetcher: './graphqlFetcher#graphqlFetcher'
+      addInfiniteQuery: true
+      exposeQueryKeys: true
+      exposeMutationKeys: true
+      exposeFetcher: true
+      dedupeOperationSuffix: true
+      namingConvention:
+        enumValues: change-case#constantCase
+        typeNames: keep
+      scalars:
+        Date: number

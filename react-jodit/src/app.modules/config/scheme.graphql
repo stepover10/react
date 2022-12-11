@@ -1,0 +1,2789 @@
+""""""
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | INTERFACE | OBJECT
+
+""""""
+type Ad {
+  """"""
+  campaignID: ID
+
+  """"""
+  campaignLandingURL: String
+
+  """"""
+  defaultImageURL: String
+
+  """"""
+  defaultLandingURL: String
+
+  """"""
+  imageURL: String
+
+  """"""
+  isPlacementActive: Boolean
+
+  """"""
+  placementHeight: Int!
+
+  """"""
+  placementID: ID!
+
+  """"""
+  placementWidth: Int!
+}
+
+""""""
+type AddBookmarkPayload {
+  """"""
+  bookmarkable: Bookmarkable
+
+  """"""
+  menu: Menu @deprecated(reason: "Use `bookmarkable`.")
+}
+
+""""""
+type Attachment {
+  """"""
+  comment: Comment
+
+  """"""
+  id: ID!
+
+  """"""
+  name: String!
+
+  """"""
+  post: Post
+
+  """"""
+  size: Int!
+
+  """"""
+  type: String!
+
+  """"""
+  url: String!
+}
+
+""""""
+type AttachmentCompleteUploadPayload {
+  """"""
+  attachment: Attachment
+}
+
+""""""
+type AttachmentDeletePayload {
+  """"""
+  attachment: Attachment
+}
+
+""""""
+type AttachmentPrepareUploadPayload {
+  """"""
+  attachment: Attachment!
+
+  """"""
+  signedURL: String!
+}
+
+""""""
+type BanLog {
+  """"""
+  createdAt: Date
+
+  """"""
+  deletedAt: Date
+
+  """"""
+  description: String
+
+  """"""
+  endAt: Date
+
+  """"""
+  id: ID!
+
+  """"""
+  startAt: Date
+
+  """"""
+  user: User
+}
+
+""""""
+type BanLogConnection {
+  """"""
+  nodes: [BanLog!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input BanLogInput {
+  """"""
+  description: String
+
+  """"""
+  endAt: Date
+
+  """"""
+  startAt: Date
+
+  """"""
+  userID: ID!
+}
+
+""""""
+input BanLogsFilter {
+  """"""
+  nickname: String
+
+  """"""
+  userID: ID
+}
+
+""""""
+input BanLogsOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: BanLogsOrderField!
+}
+
+""""""
+enum BanLogsOrderField {
+  """"""
+  CREATED_AT
+
+  """"""
+  END_AT
+
+  """"""
+  ID
+
+  """"""
+  START_AT
+}
+
+""""""
+input BestPostListInput {
+  """"""
+  endDate: String
+
+  """"""
+  minimumCommentCount: Int
+
+  """"""
+  minimumLikeCount: Int
+
+  """"""
+  minimumViewCount: Int
+
+  """"""
+  order: String
+
+  """"""
+  pagination: Pagination
+
+  """"""
+  startDate: String
+
+  """"""
+  type: BestPostListType
+}
+
+""""""
+type BestPostListPayload {
+  """"""
+  bestPosts: [Post!]
+}
+
+""""""
+enum BestPostListType {
+  """"""
+  LAST_MONTH
+
+  """"""
+  LAST_WEEK
+
+  """"""
+  RECENT
+
+  """"""
+  REPLY_COUNT
+
+  """"""
+  VOTE_COUNT
+}
+
+""""""
+type Board {
+  """"""
+  hasPermission(type: PermissionType): Boolean
+
+  """"""
+  id: ID!
+
+  """"""
+  menu: Menu
+
+  """"""
+  module: BoardType
+
+  """"""
+  notices: [Post!]!
+
+  """"""
+  posts(filterBy: PostFiltersInput, orderBy: PostOrder, pagination: Pagination): PostConnection
+
+  """"""
+  slug: String!
+
+  """"""
+  subTitle: String
+
+  """"""
+  title: String!
+}
+
+""""""
+type BoardConnection {
+  """"""
+  nodes: [Board!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input BoardFiltersInput {
+  """"""
+  permissionType: PermissionType
+
+  """"""
+  q: String
+}
+
+""""""
+type BoardNavigation {
+  """"""
+  board: Board
+
+  """"""
+  id: ID!
+
+  """"""
+  name: String!
+}
+
+""""""
+type BoardNavigationConnection {
+  """"""
+  nodes: [BoardNavigation!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input BoardNavigationFiltersInput {
+  """"""
+  name: String
+}
+
+""""""
+input BoardNavigationUpdateInput {
+  """"""
+  board: BoardUpdateInput!
+}
+
+""""""
+type BoardNavigationUpdatePayload {
+  """"""
+  boardNavigation: BoardNavigation
+}
+
+""""""
+enum BoardTab {
+  """"""
+  BEST
+
+  """"""
+  COMMUNITY
+
+  """"""
+  NOTICE
+}
+
+""""""
+enum BoardType {
+  """"""
+  BOARD
+
+  """"""
+  PAGE
+}
+
+""""""
+input BoardUpdateInput {
+  """"""
+  id: ID!
+
+  """"""
+  title: String
+}
+
+""""""
+input BookmarkOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: BookmarkOrderField!
+}
+
+""""""
+enum BookmarkOrderField {
+  """"""
+  CREATED_AT
+
+  """"""
+  ID
+}
+
+""""""
+interface Bookmarkable {
+  """"""
+  id: ID!
+
+  """"""
+  viewerHasBookmarked: Boolean!
+}
+
+""""""
+type BookmarkableConnection {
+  """"""
+  nodes: [Bookmarkable!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+enum CacheControlScope {
+  """"""
+  PRIVATE
+
+  """"""
+  PUBLIC
+}
+
+""""""
+type CollectionRequirement {
+  """"""
+  comment: Int!
+
+  """"""
+  createdAt: Date
+
+  """"""
+  id: ID!
+
+  """"""
+  like: Int!
+
+  """"""
+  scrap: Int!
+
+  """"""
+  slug: String!
+
+  """"""
+  view: Int!
+}
+
+""""""
+input CollectionRequirementUpdateInput {
+  """"""
+  comment: Int
+
+  """"""
+  like: Int
+
+  """"""
+  scrap: Int
+
+  """"""
+  view: Int
+}
+
+""""""
+type CollectionRequirementUpdatePayload {
+  """"""
+  collectionRequirement: CollectionRequirement
+}
+
+""""""
+type Comment {
+  """운영자가 신고된 댓글을 가장 최근에 확인한 날짜"""
+  adminReportReadAt: Date
+
+  """"""
+  attachments: [Attachment!]!
+
+  """"""
+  author: User
+
+  """"""
+  board: Board
+
+  """"""
+  boardID: Int
+
+  """"""
+  childComment: [Comment!]!
+
+  """"""
+  childCommentCount: Int!
+
+  """"""
+  content: String
+
+  """"""
+  contentText(pruneLength: Int = 140): String
+
+  """"""
+  contentTextForAdmin: String @deprecated(reason: "Use `originContentText`.")
+
+  """"""
+  createdAt: Date!
+
+  """"""
+  deletedAt: Date
+
+  """"""
+  dislikes: Int!
+
+  """"""
+  excerpt(pruneLength: Int = 140): String @deprecated(reason: "Use `contentText`.")
+
+  """운영자가 읽지 않은 신고 존재 여부"""
+  hasUnreadReport: Boolean
+
+  """"""
+  id: ID!
+
+  """"""
+  ipaddress: String
+
+  """"""
+  isAnonymous: Boolean!
+
+  """"""
+  isAuthor: Boolean!
+
+  """"""
+  isChild: Boolean!
+
+  """"""
+  isPostAuthor: Boolean!
+
+  """"""
+  isSecret: Boolean!
+
+  """가장 최근에 신고된 날짜"""
+  lastReportedAt: Date
+
+  """"""
+  likes: Int!
+
+  """"""
+  myRating: RatingType
+
+  """"""
+  nickname: String!
+
+  """"""
+  originContentText: String
+
+  """"""
+  post: Post
+
+  """"""
+  postID: Int!
+
+  """신고 수"""
+  reportCount: Int
+
+  """사유별 신고 수"""
+  reportCountByDescription: [CommetAbuseReportLogCountByDescription!]
+
+  """최근 신고사유, 운영자만 조회 가능함"""
+  reportDescription: String
+
+  """신고 로그"""
+  reportLogs(filterBy: CommentAbuseReportLogFilters, orderBy: CommentAbuseReportLogOrder, pagination: Pagination): CommentAbuseReportLogConnection
+
+  """"""
+  updatedAt: Date!
+
+  """"""
+  userID: Int
+
+  """"""
+  username: String
+
+  """"""
+  viewerHasMuteAuthor: Boolean!
+}
+
+""""""
+type CommentAbuseReportLog {
+  """운영자가 확인한 시간"""
+  adminReadAt: Date
+
+  """"""
+  comment: Comment
+
+  """"""
+  createdAt: Date
+
+  """"""
+  description: String
+
+  """"""
+  id: ID
+
+  """"""
+  ipaddress: String
+
+  """신고한 회원"""
+  reporter: User
+}
+
+""""""
+type CommentAbuseReportLogBulkUpdatePayload {
+  """"""
+  updatedCommentAbuseReportLogs: Int!
+}
+
+""""""
+type CommentAbuseReportLogConnection {
+  """"""
+  nodes: [CommentAbuseReportLog!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input CommentAbuseReportLogFilters {
+  """"""
+  commentID: ID
+}
+
+""""""
+input CommentAbuseReportLogOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: CommentAbuseReportLogOrderField!
+}
+
+""""""
+enum CommentAbuseReportLogOrderField {
+  """"""
+  ADMIN_READ_AT
+
+  """"""
+  CREATED_AT
+
+  """"""
+  ID
+}
+
+""""""
+type CommentAbuseReportLogUpdatePayload {
+  """"""
+  commentAbuseReportLog: CommentAbuseReportLog
+}
+
+""""""
+type CommentConnection {
+  """"""
+  nodes: [Comment!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+type CommentCreatePayload {
+  """"""
+  comment: Comment
+
+  """"""
+  parentComment: Comment
+
+  """"""
+  post: Post
+}
+
+""""""
+type CommentDeletePayload {
+  """"""
+  deletedCommentID: String
+
+  """"""
+  parentComment: Comment
+
+  """"""
+  post: Post
+}
+
+""""""
+type CommentDislikePayload {
+  """"""
+  comment: Comment
+}
+
+""""""
+input CommentFiltersInput {
+  """"""
+  hasChildren: Boolean
+
+  """"""
+  page: Int
+
+  """"""
+  parentID: ID
+
+  """"""
+  userID: ID
+}
+
+""""""
+input CommentInput {
+  """"""
+  attachmentIDs: [ID!]
+
+  """"""
+  content: String!
+
+  """"""
+  contentText: String
+
+  """"""
+  isSecret: Boolean
+}
+
+""""""
+type CommentLikePayload {
+  """"""
+  comment: Comment
+}
+
+""""""
+input CommentOrder {
+  """"""
+  direction: OrderDirection
+
+  """"""
+  field: CommentOrderField
+}
+
+""""""
+enum CommentOrderField {
+  """"""
+  CREATED_AT
+
+  """"""
+  ID
+
+  """"""
+  LIKES
+}
+
+""""""
+type CommentRatePayload {
+  """"""
+  comment: Comment
+}
+
+""""""
+type CommentRemoveLikePayload {
+  """"""
+  comment: Comment
+}
+
+""""""
+type CommentReportConnection {
+  """"""
+  nodes: [Comment!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input CommentReportFilters {
+  """내용"""
+  contentText: String
+
+  """신고날짜 종료일"""
+  endDate: Date
+
+  """링커리어 사이트에 등록된 닉네임"""
+  nickname: String
+
+  """안읽은 신고 내역 있는지 여부"""
+  reportReadStatus: ReportReadStatus
+
+  """신고날짜 시작일"""
+  startDate: Date
+
+  """회원 아이디"""
+  userID: ID
+}
+
+""""""
+input CommentReportOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: CommentReportOrderField!
+}
+
+""""""
+enum CommentReportOrderField {
+  """"""
+  DELETED_AT
+
+  """"""
+  ID
+
+  """"""
+  LAST_REPORTED_AT
+
+  """"""
+  REPORT_COUNT
+}
+
+""""""
+input CommentTrashFilters {
+  """내용"""
+  contentText: String
+
+  """신고날짜 종료일"""
+  endDate: Date
+
+  """링커리어 사이트에 등록된 닉네임"""
+  nickname: String
+
+  """신고날짜 시작일"""
+  startDate: Date
+
+  """회원 아이디"""
+  userID: ID
+}
+
+""""""
+input CommentTrashOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: CommentTrashOrderField!
+}
+
+""""""
+enum CommentTrashOrderField {
+  """"""
+  DELETED_AT
+
+  """"""
+  ID
+
+  """"""
+  LAST_REPORTED_AT
+}
+
+""""""
+input CommentUpdateInput {
+  """"""
+  attachmentIDs: [ID!]
+
+  """"""
+  content: String!
+}
+
+""""""
+type CommentUpdatePayload {
+  """"""
+  comment: Comment
+}
+
+""""""
+type CommetAbuseReportLogCountByDescription {
+  """"""
+  count: Int
+
+  """"""
+  description: String
+}
+
+""""""
+type Config {
+  """"""
+  defaultValue: String
+
+  """"""
+  description: String!
+
+  """"""
+  id: ID!
+
+  """"""
+  name: String!
+
+  """"""
+  value: String
+}
+
+""""""
+input ConfigInput {
+  """"""
+  value: String
+}
+
+""""""
+type CurrentUserScrapConnection {
+  """"""
+  nodes: [UserScrap!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+type CurrentUserScrapCreatePayload {
+  """"""
+  userScrap: UserScrap
+}
+
+""""""
+type CurrentUserScrapDeletePayload {
+  """"""
+  userScrap: UserScrap
+}
+
+""""""
+type CurrentUserScrapsDeleteAllPayload {
+  """"""
+  userScrap: [UserScrap!]!
+}
+
+""""""
+input CurrentUserScrapsFilter {
+  """"""
+  postID: ID
+
+  """"""
+  q: String
+}
+
+""""""
+type DailyCommentByUserConnection {
+  """"""
+  nodes: [Comment!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input DailyCommentByUserFilters {
+  """"""
+  dateAt: String
+}
+
+""""""
+input DailyCommentByUserOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: DailyCommentByUserOrderField!
+}
+
+""""""
+enum DailyCommentByUserOrderField {
+  """"""
+  ID
+}
+
+""""""
+type DailyPostByUserConnection {
+  """"""
+  nodes: [Post!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input DailyPostByUserFilters {
+  """"""
+  dateAt: String
+}
+
+""""""
+input DailyPostByUserOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: DailyPostByUserOrderField!
+}
+
+""""""
+enum DailyPostByUserOrderField {
+  """"""
+  ID
+}
+
+"""Date"""
+scalar Date
+
+""""""
+type Menu implements Bookmarkable {
+  """"""
+  board: Board
+
+  """"""
+  bookmarkable: Boolean!
+
+  """"""
+  description: String
+
+  """"""
+  groupIDList: String
+
+  """"""
+  groupIDs: [ID!]!
+
+  """"""
+  hasNewPost: Boolean!
+
+  """"""
+  id: ID!
+
+  """"""
+  isShortcut: Boolean!
+
+  """"""
+  menuType: String
+
+  """"""
+  order: Int
+
+  """"""
+  parentID: String
+
+  """"""
+  slug: String
+
+  """"""
+  subMenus: [Menu!]!
+
+  """"""
+  title: String
+
+  """"""
+  updatedAt: Date
+
+  """"""
+  viewerHasBookmarked: Boolean!
+}
+
+""""""
+input MenuOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: MenuOrderField!
+}
+
+""""""
+enum MenuOrderField {
+  """"""
+  ORDER
+}
+
+""""""
+type Message {
+  """"""
+  content: String!
+
+  """"""
+  createdAt: Date!
+
+  """"""
+  excerpt(pruneLength: Int = 140): String
+
+  """"""
+  hasRead: Boolean!
+
+  """"""
+  id: ID!
+
+  """"""
+  isReplied: Boolean
+
+  """"""
+  linkURL: String
+
+  """"""
+  notificationType: String
+
+  """"""
+  order: Int
+
+  """"""
+  readAt: Date
+
+  """"""
+  receivedMessageID: Int!
+
+  """"""
+  receiver: User
+
+  """"""
+  receiverID: Int!
+
+  """"""
+  sender: User
+
+  """"""
+  senderID: Int!
+
+  """"""
+  title: String
+
+  """"""
+  type: String!
+}
+
+""""""
+type MessageConnection {
+  """"""
+  nodes: [Message!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input MessageCreateInput {
+  """"""
+  content: String!
+
+  """"""
+  isReplied: Boolean!
+
+  """"""
+  receiverID: Int!
+}
+
+""""""
+type MessageCreatePayload {
+  """"""
+  message: Message
+}
+
+""""""
+type MessageDeleteAllPayload {
+  """"""
+  count: Int
+}
+
+""""""
+type MessageDeletePayload {
+  """"""
+  message: Message
+}
+
+""""""
+input MessageFiltersInput {
+  """"""
+  type: String!
+}
+
+""""""
+input MessageOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: MessageOrderField!
+}
+
+""""""
+enum MessageOrderField {
+  """"""
+  CREATED_AT
+
+  """"""
+  ID
+}
+
+""""""
+type MessageStorePayload {
+  """"""
+  message: Message
+}
+
+""""""
+type MessageUpdatePayload {
+  """"""
+  message: Message
+}
+
+""""""
+type Mutation {
+  """"""
+  addBookmark(id: ID, menuID: ID): AddBookmarkPayload
+
+  """"""
+  attachmentCompleteUpload(attachmentID: ID!): AttachmentCompleteUploadPayload
+
+  """"""
+  attachmentDelete(attachmentID: ID!): AttachmentDeletePayload
+
+  """"""
+  attachmentPrepareUpload(commentID: ID, name: String, postID: ID, size: Int, type: String!): AttachmentPrepareUploadPayload
+
+  """"""
+  banUser(input: BanLogInput!): BanLog
+
+  """"""
+  boardNavigationUpdate(id: ID!, input: BoardNavigationUpdateInput!): BoardNavigationUpdatePayload
+
+  """"""
+  commentAbuseReport(id: ID!): Boolean
+
+  """"""
+  commentCreate(input: CommentInput!, parentID: ID, postID: ID!): CommentCreatePayload
+
+  """"""
+  commentDelete(id: ID!): CommentDeletePayload
+
+  """"""
+  commentDislike(id: ID!): CommentDislikePayload
+
+  """"""
+  commentLike(id: ID!): CommentLikePayload
+
+  """"""
+  commentRate(id: ID!, rating: RatingType!): CommentRatePayload
+
+  """"""
+  commentRemoveLike(id: ID!): CommentRemoveLikePayload
+
+  """"""
+  commentUpdate(id: ID!, input: CommentInput!): CommentUpdatePayload
+
+  """"""
+  configReset(id: ID!): Boolean
+
+  """"""
+  configUpdate(id: ID!, input: ConfigInput!): Config
+
+  """"""
+  currentUserScrapCreate(postID: ID!): CurrentUserScrapCreatePayload
+
+  """"""
+  currentUserScrapDelete(postID: ID!): CurrentUserScrapDeletePayload
+
+  """"""
+  currentUserScrapsDeleteAll: CurrentUserScrapsDeleteAllPayload
+
+  """"""
+  issueSignedURL(contentType: String): String
+
+  """"""
+  logout: Boolean
+
+  """"""
+  messageCreate(input: MessageCreateInput!): MessageCreatePayload
+
+  """"""
+  messageDelete(id: ID!): MessageDeletePayload
+
+  """"""
+  messageDeleteAll(ids: [ID!]!): MessageDeleteAllPayload
+
+  """"""
+  messageStore(id: ID!): MessageStorePayload
+
+  """"""
+  messageUpdate(id: ID!): MessageUpdatePayload
+
+  """"""
+  muteUser(mutedUserID: ID!): User
+
+  """"""
+  notificationCreate(input: NotificationCreateInput!): NotificationCreatePayload
+
+  """"""
+  notificationDelete(id: ID!): NotificationDeletePayload
+
+  """"""
+  notificationDeleteAll: NotificationDeleteAllPayload
+
+  """"""
+  notificationUpdate(hasRead: Boolean!, id: ID!): NotificationUpdatePayload
+
+  """"""
+  postAbuseReport(id: ID!): Boolean
+
+  """"""
+  postCollectionCreate(input: PostCollectionInput!): PostCollectionCreatePayload
+
+  """"""
+  postCollectionDelete(id: ID!): PostCollectionDeletePayload
+
+  """"""
+  postCollectionRebuild(automation: PostCollectionAutomationInput, id: ID!): PostCollectionRebuildPayload
+
+  """"""
+  postCollectionUpdate(id: ID!, input: PostCollectionInput!): PostCollectionUpdatePayload
+
+  """"""
+  postCreate(input: PostInput!): PostCreatePayload
+
+  """"""
+  postDelete(id: ID!): PostDeletePayload
+
+  """"""
+  postDeleteMany(ids: [ID!]!): PostDeleteManyPayload
+
+  """"""
+  postDislike(id: ID!): PostDislikePayload
+
+  """"""
+  postLike(id: ID!): PostLikePayload
+
+  """"""
+  postRate(id: ID!, rating: RatingType!): PostRatePayload
+
+  """"""
+  postRead(id: ID!): PostReadPayload
+
+  """"""
+  postRemoveLike(id: ID!): PostRemoveLikePayload
+
+  """"""
+  postUpdate(id: ID!, input: PostUpdateInput!): PostUpdatePayload
+
+  """"""
+  postUpdateMany(ids: [ID!]!, input: PostUpdateManyInput!): PostUpdateManyPayload
+
+  """"""
+  postsUpdate(boardID: ID!, input: PostsUpdateInput!): PostsUpdatePayload
+
+  """운영자가 댓글 전체 신고내역을 확인"""
+  readAllCommentAbuseReportLog(commentID: ID!): CommentAbuseReportLogBulkUpdatePayload
+
+  """운영자가 게시글 전체 신고내역을 확인"""
+  readAllPostAbuseReportLog(postID: ID!): PostAbuseReportLogBulkUpdatePayload
+
+  """운영자가 댓글 신고내역을 확인"""
+  readCommentAbuseReportLog(id: ID!): CommentAbuseReportLogUpdatePayload
+
+  """운영자가 게시글 신고내역을 확인"""
+  readPostAbuseReportLog(id: ID!): PostAbuseReportLogUpdatePayload
+
+  """"""
+  removeBookmark(id: ID, menuID: ID): RemoveBookmarkPayload
+
+  """댓글을 신고"""
+  reportComment(input: ReportCommentInput!): ReportCommentPayload
+
+  """게시물을 신고"""
+  reportPost(input: ReportPostInput!): ReportPostPayload
+
+  """"""
+  restorePost(id: ID!): RestorePostPayload
+
+  """"""
+  tagCreate(input: TagInput!): TagCreatePayload
+
+  """"""
+  tagDelete(id: ID!): TagDeletePayload
+
+  """"""
+  tagDeleteMany(ids: [ID!]!): TagDeleteManyPayload
+
+  """"""
+  tagUpdate(id: ID!, input: TagInput!): TagUpdatePayload
+
+  """"""
+  trashCreate(input: TrashInput): TrashCreatePayload
+
+  """"""
+  unbanUsers(logIDs: [ID!]!): UnbanLogsPayLoad
+
+  """"""
+  unmuteUser(mutedUserID: ID!): User
+
+  """"""
+  updateBestOfBestRequirement(input: CollectionRequirementUpdateInput!): CollectionRequirementUpdatePayload
+
+  """"""
+  updateBestPostRequirement(input: CollectionRequirementUpdateInput!): CollectionRequirementUpdatePayload
+}
+
+""""""
+type Notification {
+  """"""
+  content: String!
+
+  """"""
+  createdAt: Date!
+
+  """"""
+  deletedAt: Date
+
+  """"""
+  hasRead: Boolean!
+
+  """"""
+  id: ID!
+
+  """"""
+  linkURL: String!
+
+  """"""
+  receiverID: Int
+
+  """"""
+  senderID: Int
+
+  """"""
+  senderNickname: String
+
+  """"""
+  title: String
+
+  """"""
+  type: String
+}
+
+""""""
+type NotificationConnection {
+  """"""
+  notifications: [Notification]
+}
+
+""""""
+input NotificationCreateInput {
+  """"""
+  content: String!
+
+  """"""
+  linkURL: String!
+
+  """"""
+  notificationType: String!
+
+  """"""
+  receiverID: Int!
+}
+
+""""""
+type NotificationCreatePayload {
+  """"""
+  notification: Message
+}
+
+""""""
+type NotificationDeleteAllPayload {
+  """"""
+  count: Int
+}
+
+""""""
+type NotificationDeletePayload {
+  """"""
+  notification: Message
+}
+
+""""""
+type NotificationUpdatePayload {
+  """"""
+  notification: Message
+}
+
+""""""
+enum OrderDirection {
+  """"""
+  ASC
+
+  """"""
+  DESC
+}
+
+""""""
+input Pagination {
+  """"""
+  page: Int!
+
+  """"""
+  pageSize: Int!
+}
+
+""""""
+enum PermissionType {
+  """"""
+  ACCESS
+
+  """"""
+  CONSULTATION_READ
+
+  """"""
+  LIST
+
+  """"""
+  MANAGER
+
+  """"""
+  VIEW
+
+  """"""
+  WRITE_COMMENT
+
+  """"""
+  WRITE_DOCUMENT
+}
+
+""""""
+type Post {
+  """운영자가 신고 내역을 전부 읽은 날짜"""
+  adminReportReadAt: Date
+
+  """"""
+  allowTrackback: Boolean
+
+  """"""
+  attachments: [Attachment!]!
+
+  """"""
+  author: User
+
+  """"""
+  board: Board
+
+  """"""
+  commentCount: Int!
+
+  """"""
+  commentStatus: PostCommentStatus
+
+  """"""
+  comments(orderBy: CommentOrder, pagination: Pagination): CommentConnection!
+
+  """"""
+  containsImage: Boolean!
+
+  """"""
+  containsYoutube: Boolean!
+
+  """"""
+  content: String
+
+  """"""
+  contentText(pruneLength: Int = 140): String
+
+  """"""
+  createdAt: Date!
+
+  """"""
+  deletedAt: Date
+
+  """"""
+  dislikes: Int!
+
+  """"""
+  excerpt(pruneLength: Int = 140): String @deprecated(reason: "Use `contentText`.")
+
+  """"""
+  globalNotice: Boolean
+
+  """운영자가 읽지 않은 신고 존재 여부"""
+  hasUnreadReport: Boolean
+
+  """"""
+  id: ID!
+
+  """"""
+  imageSrc: String
+
+  """"""
+  ipaddress: String
+
+  """"""
+  isAnonymous: Boolean!
+
+  """"""
+  isAuthor: Boolean
+
+  """"""
+  isNotice: Boolean
+
+  """"""
+  isScrapped: Boolean!
+
+  """가장 최근에 신고된 날짜"""
+  lastReportedAt: Date
+
+  """"""
+  likes: Int!
+
+  """"""
+  myRating: RatingType
+
+  """"""
+  nextPostID(postCursorType: PostCursorType = BOARD): ID
+
+  """"""
+  nickname: String
+
+  """"""
+  notifyMessage: Boolean
+
+  """"""
+  originContentText: String
+
+  """"""
+  postCollections: [PostCollection!]!
+
+  """"""
+  prevPostID(postCursorType: PostCursorType = BOARD): ID
+
+  """신고 수"""
+  reportCount: Int
+
+  """사유별 신고 수"""
+  reportCountByDescription: [PostAbuseReportLogCountByDescription!]
+
+  """최근 신고사유, 운영자만 조회 가능함"""
+  reportDescription: String
+
+  """신고 로그"""
+  reportLogs(orderBy: PostAbuseReportLogOrder, pagination: Pagination): PostAbuseReportLogConnection
+
+  """"""
+  score: Int!
+
+  """"""
+  scrapCount: Int!
+
+  """"""
+  status: PostStatus
+
+  """"""
+  tags: [Tag!]!
+
+  """"""
+  title: String
+
+  """"""
+  updatedAt: Date!
+
+  """"""
+  url: String
+
+  """"""
+  username: String
+
+  """"""
+  viewerHasMuteAuthor: Boolean!
+
+  """"""
+  views: Int!
+
+  """"""
+  youtubeSrc: String
+}
+
+""""""
+type PostAbuseReportLog {
+  """운영자가 확인한 시간"""
+  adminReadAt: Date
+
+  """"""
+  createdAt: Date
+
+  """"""
+  description: String
+
+  """"""
+  id: ID
+
+  """"""
+  ipaddress: String
+
+  """"""
+  post: Post
+
+  """신고한 회원"""
+  reporter: User
+}
+
+""""""
+type PostAbuseReportLogBulkUpdatePayload {
+  """"""
+  updatedPostAbuseReportLogs: Int!
+}
+
+""""""
+type PostAbuseReportLogConnection {
+  """"""
+  nodes: [PostAbuseReportLog!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+type PostAbuseReportLogCountByDescription {
+  """"""
+  count: Int
+
+  """"""
+  description: String
+}
+
+""""""
+input PostAbuseReportLogFilters {
+  """"""
+  postID: ID
+}
+
+""""""
+input PostAbuseReportLogOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: PostAbuseReportLogOrderField!
+}
+
+""""""
+enum PostAbuseReportLogOrderField {
+  """"""
+  ADMIN_READ_AT
+
+  """"""
+  CREATED_AT
+
+  """"""
+  ID
+}
+
+""""""
+type PostAbuseReportLogUpdatePayload {
+  """"""
+  postAbuseReportLog: PostAbuseReportLog
+}
+
+""""""
+type PostCollection {
+  """"""
+  automation: PostCollectionAutomation
+
+  """"""
+  id: ID!
+
+  """"""
+  posts(orderBy: PostOrder, pagination: Pagination): [Post!]!
+
+  """"""
+  title: String
+
+  """"""
+  updatedAt: Date!
+}
+
+""""""
+type PostCollectionAutomation {
+  """"""
+  boards: [Board!]!
+
+  """"""
+  enabled: Boolean!
+
+  """"""
+  filters: PostFilters
+}
+
+""""""
+input PostCollectionAutomationInput {
+  """"""
+  boardIDs: [ID!]
+
+  """"""
+  enabled: Boolean
+
+  """"""
+  filters: PostFiltersInput
+}
+
+""""""
+type PostCollectionConnection {
+  """"""
+  nodes: [PostCollection]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+type PostCollectionCreatePayload {
+  """"""
+  postCollection: PostCollection
+}
+
+""""""
+type PostCollectionDeletePayload {
+  """"""
+  postCollection: PostCollection
+}
+
+""""""
+input PostCollectionFiltersInput {
+  """"""
+  q: String
+}
+
+""""""
+input PostCollectionInput {
+  """"""
+  automation: PostCollectionAutomationInput
+
+  """"""
+  postIDs: [ID!]
+
+  """"""
+  title: String
+}
+
+""""""
+input PostCollectionOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: PostCollectionOrderField!
+}
+
+""""""
+enum PostCollectionOrderField {
+  """"""
+  ID
+}
+
+""""""
+type PostCollectionRebuildPayload {
+  """"""
+  postCollection: PostCollection
+}
+
+""""""
+type PostCollectionUpdatePayload {
+  """"""
+  postCollection: PostCollection
+}
+
+""""""
+enum PostCommentStatus {
+  """"""
+  ALLOW
+
+  """"""
+  DENY
+}
+
+""""""
+type PostConnection {
+  """"""
+  nodes: [Post!]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+type PostCreatePayload {
+  """"""
+  menu: Menu
+
+  """"""
+  post: Post
+}
+
+""""""
+enum PostCursorType {
+  """"""
+  ALL
+
+  """"""
+  BEST
+
+  """"""
+  BOARD
+}
+
+""""""
+type PostDeleteManyPayload {
+  """"""
+  posts: [Post!]!
+}
+
+""""""
+type PostDeletePayload {
+  """"""
+  deletedPostID: ID
+
+  """"""
+  post: Post
+}
+
+""""""
+type PostDislikePayload {
+  """"""
+  post: Post
+}
+
+""""""
+type PostFilters {
+  """"""
+  globalNotice: Boolean
+
+  """"""
+  views: Range
+}
+
+""""""
+input PostFiltersInput {
+  """"""
+  boardID: ID
+
+  """"""
+  commentUserID: ID
+
+  """"""
+  excludedBoardIDs: [ID!]
+
+  """"""
+  field: String
+
+  """"""
+  globalNotice: Boolean
+
+  """"""
+  minimumCommentCount: Int
+
+  """"""
+  minimumLikeCount: Int
+
+  """"""
+  minimumViewCount: Int
+
+  """"""
+  onlyDelete: Boolean
+
+  """"""
+  q: String
+
+  """"""
+  scrapCount: Int
+
+  """"""
+  tagID: ID
+
+  """"""
+  userID: ID
+
+  """"""
+  views: RangeInput
+
+  """"""
+  withDelete: Boolean
+
+  """"""
+  word: String
+}
+
+""""""
+input PostInput {
+  """"""
+  allowTrackback: Boolean
+
+  """"""
+  attachmentIDs: [ID!]
+
+  """"""
+  boardID: Int!
+
+  """"""
+  commentStatus: PostCommentStatus = ALLOW
+
+  """"""
+  containsImage: Boolean
+
+  """"""
+  containsYoutube: Boolean
+
+  """"""
+  content: String!
+
+  """"""
+  contentText: String!
+
+  """"""
+  imageSrc: String
+
+  """"""
+  isNotice: Boolean
+
+  """"""
+  notifyMessage: Boolean
+
+  """"""
+  status: PostStatus!
+
+  """"""
+  tags: [String!]
+
+  """"""
+  title: String!
+
+  """"""
+  youtubeSrc: String
+}
+
+""""""
+type PostLikePayload {
+  """"""
+  post: Post
+}
+
+""""""
+input PostOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: PostOrderField!
+}
+
+""""""
+enum PostOrderField {
+  """"""
+  COMMENT_COUNT
+
+  """"""
+  CREATED_AT
+
+  """"""
+  GLOBAL_NOTICE
+
+  """"""
+  ID
+
+  """"""
+  LIKES
+
+  """"""
+  SCORE
+
+  """"""
+  SCRAP_COUNT
+
+  """"""
+  UPDATED_AT
+
+  """"""
+  VIEWS
+}
+
+""""""
+type PostRatePayload {
+  """"""
+  post: Post
+}
+
+""""""
+type PostReadPayload {
+  """"""
+  post: Post
+}
+
+""""""
+type PostRemoveLikePayload {
+  """"""
+  post: Post
+}
+
+""""""
+input PostReportFilters {
+  """신고날짜 종료일"""
+  endDate: Date
+
+  """링커리어 사이트에 등록된 닉네임"""
+  nickname: String
+
+  """안읽은 신고 내역 있는지 여부"""
+  reportReadStatus: ReportReadStatus
+
+  """신고날짜 시작일"""
+  startDate: Date
+
+  """제목"""
+  title: String
+
+  """회원 아이디"""
+  userID: ID
+}
+
+""""""
+input PostReportOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: PostReportOrderField!
+}
+
+""""""
+enum PostReportOrderField {
+  """"""
+  DELETED_AT
+
+  """"""
+  ID
+
+  """"""
+  LAST_REPORTED_AT
+
+  """"""
+  REPORT_COUNT
+}
+
+""""""
+input PostSearchFiltersInput {
+  """"""
+  boardSlugs: [String!]
+
+  """"""
+  minimumShouldMatch: String
+
+  """"""
+  query: String
+}
+
+""""""
+enum PostSearchOrderField {
+  """"""
+  CREATED_AT
+
+  """"""
+  RELEVANCE
+
+  """"""
+  VIEW_COUNT
+}
+
+""""""
+input PostSearchOrderInput {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: PostSearchOrderField!
+}
+
+""""""
+type PostSearchResult {
+  """"""
+  score: Float
+
+  """"""
+  source: Post
+}
+
+""""""
+type PostSearchResultConnection {
+  """"""
+  nodes: [PostSearchResult]
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+enum PostStatus {
+  """"""
+  PUBLIC
+
+  """"""
+  TEMP
+}
+
+""""""
+input PostTrashFilters {
+  """신고날짜 종료일"""
+  endDate: Date
+
+  """링커리어 사이트에 등록된 닉네임"""
+  nickname: String
+
+  """신고날짜 시작일"""
+  startDate: Date
+
+  """제목"""
+  title: String
+
+  """회원 아이디"""
+  userID: ID
+}
+
+""""""
+input PostTrashOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: PostTrashOrderField!
+}
+
+""""""
+enum PostTrashOrderField {
+  """"""
+  DELETED_AT
+
+  """"""
+  ID
+
+  """"""
+  LAST_REPORTED_AT
+}
+
+""""""
+input PostUpdateInput {
+  """"""
+  allowTrackback: Boolean
+
+  """"""
+  attachmentIDs: [ID!]
+
+  """"""
+  boardID: Int
+
+  """"""
+  commentStatus: PostCommentStatus = ALLOW
+
+  """"""
+  containsImage: Boolean
+
+  """"""
+  containsYoutube: Boolean
+
+  """"""
+  content: String
+
+  """"""
+  contentText: String
+
+  """"""
+  globalNotice: Boolean
+
+  """"""
+  imageSrc: String
+
+  """"""
+  isNotice: Boolean
+
+  """"""
+  notifyMessage: Boolean
+
+  """"""
+  postCollectionIDs: [ID!]
+
+  """"""
+  status: PostStatus
+
+  """tag table을 따로 관리하면서 추가됨"""
+  tagIDs: [ID!]
+
+  """"""
+  tags: [String!]
+
+  """"""
+  title: String
+
+  """"""
+  updatedAt: Date
+
+  """"""
+  youtubeSrc: String
+}
+
+""""""
+input PostUpdateManyInput {
+  """"""
+  globalNotice: Boolean
+}
+
+""""""
+type PostUpdateManyPayload {
+  """"""
+  posts: [Post!]!
+}
+
+""""""
+type PostUpdatePayload {
+  """"""
+  post: Post
+}
+
+""""""
+input PostsUpdateInput {
+  """"""
+  isDelete: Boolean!
+
+  """"""
+  postIds: [ID!]
+}
+
+""""""
+type PostsUpdatePayload {
+  """"""
+  posts: [Post]
+}
+
+""""""
+type Query {
+  """"""
+  banLogs(filterBy: BanLogsFilter, orderBy: BanLogsOrder, pagination: Pagination): BanLogConnection
+
+  """"""
+  bestOfBestPostPreviews(filterBy: PostFiltersInput, orderBy: PostOrder, pagination: Pagination): PostConnection
+
+  """"""
+  bestOfBestRequirement: CollectionRequirement
+
+  """"""
+  bestPostList(input: BestPostListInput!): BestPostListPayload
+
+  """"""
+  bestPostRequirement: CollectionRequirement
+
+  """"""
+  board(id: ID!): Board
+
+  """"""
+  boardBySlug(boardSlug: String!, boardTab: BoardTab, isBest: Boolean, isNotice: Boolean): Board
+
+  """"""
+  boardNavigation(id: ID!): BoardNavigation
+
+  """"""
+  boardNavigations(filterBy: BoardNavigationFiltersInput): BoardNavigationConnection
+
+  """"""
+  boards(filterBy: BoardFiltersInput, pagination: Pagination, query: String): BoardConnection
+
+  """"""
+  boardsByID(ids: [ID!]!): [Board]
+
+  """"""
+  bookmarks(orderBy: BookmarkOrder, pagination: Pagination): BookmarkableConnection!
+
+  """"""
+  comment(id: ID!): Comment
+
+  """댓글 신고 내역 조회"""
+  commentAbuseReportLogs(filterBy: CommentAbuseReportLogFilters, orderBy: CommentAbuseReportLogOrder, pagination: Pagination): CommentAbuseReportLogConnection!
+
+  """"""
+  comments(filterBy: CommentFiltersInput, orderBy: CommentOrder, pagination: Pagination): CommentConnection
+
+  """"""
+  config(id: ID!): Config
+
+  """"""
+  configsAll: [Config!]!
+
+  """"""
+  currentAdByPlacementCode(code: String!, currentTime: String!): Ad
+
+  """"""
+  currentUser: User
+
+  """"""
+  currentUserScrap(postID: ID!): UserScrap
+
+  """"""
+  currentUserScraps(filterBy: CurrentUserScrapsFilter, orderBy: UserScrapOrder, pagination: Pagination): CurrentUserScrapConnection!
+
+  """"""
+  currentUserScrapsCount(filterBy: CurrentUserScrapsFilter!): Int!
+
+  """"""
+  dailyCommentByUsers(filterBy: DailyCommentByUserFilters, orderBy: DailyCommentByUserOrder, pagination: Pagination): DailyCommentByUserConnection
+
+  """"""
+  dailyPostByUsers(filterBy: DailyPostByUserFilters, orderBy: DailyPostByUserOrder, pagination: Pagination): DailyPostByUserConnection
+
+  """"""
+  externalNotificationsUnreadCount: Int!
+
+  """"""
+  menu: Menu
+
+  """"""
+  message(id: ID!): Message
+
+  """"""
+  messageUnreadCount: Int!
+
+  """"""
+  messages(orderBy: MessageOrder, pagination: Pagination): MessageConnection
+
+  """"""
+  messagesByUserId(filterBy: MessageFiltersInput, orderBy: MessageOrder, pagination: Pagination, userID: ID!): MessageConnection
+
+  """"""
+  notifications: NotificationConnection
+
+  """"""
+  notificationsUnreadCount: Int!
+
+  """"""
+  oidcClientID: String!
+
+  """"""
+  post(fromBestList: Boolean = false, id: ID!, permissionType: PermissionType): Post
+
+  """게시글 신고 내역 조회"""
+  postAbuseReportLogs(filterBy: PostAbuseReportLogFilters, orderBy: PostAbuseReportLogOrder, pagination: Pagination): PostAbuseReportLogConnection!
+
+  """"""
+  postCollection(id: ID!): PostCollection
+
+  """"""
+  postCollections(filterBy: PostCollectionFiltersInput, orderBy: PostCollectionOrder, pagination: Pagination, query: String): PostCollectionConnection
+
+  """"""
+  postCollectionsByID(ids: [ID!]!): [PostCollection]
+
+  """"""
+  postSearch(filterBy: PostSearchFiltersInput!, orderBy: PostSearchOrderInput, pagination: Pagination): PostSearchResultConnection
+
+  """"""
+  posts(filterBy: PostFiltersInput, orderBy: PostOrder, pagination: Pagination, query: String): PostConnection
+
+  """"""
+  postsByID(ids: [ID!]!): [Post]
+
+  """신고된 댓글 조회"""
+  reportedComments(filterBy: CommentReportFilters, orderBy: CommentReportOrder, pagination: Pagination): CommentConnection
+
+  """신고된 게시물 조회"""
+  reportedPosts(filterBy: PostReportFilters, orderBy: PostReportOrder, pagination: Pagination): PostConnection
+
+  """"""
+  tag(id: ID!): Tag
+
+  """"""
+  tags(filterBy: TagFilters, orderBy: TagOrder, pagination: Pagination): TagConnection!
+
+  """"""
+  tagsByID(ids: [ID!]!): [Tag!]!
+
+  """"""
+  trash(id: ID!): Trash!
+
+  """삭제된 댓글 조회"""
+  trashedComments(filterBy: CommentTrashFilters, orderBy: CommentTrashOrder, pagination: Pagination): CommentConnection
+
+  """삭제된 게시물 조회"""
+  trashedPosts(filterBy: PostTrashFilters, orderBy: PostTrashOrder, pagination: Pagination): PostConnection
+
+  """"""
+  trashes(pagination: Pagination): TrashConnection!
+
+  """"""
+  user(id: ID!): User
+
+  """"""
+  users(filterBy: UserFilters, orderBy: UserOrder, pagination: Pagination): UserConnection!
+
+  """"""
+  usersByID(ids: [ID!]!): [User!]!
+}
+
+""""""
+type Range {
+  """"""
+  gte: Int
+}
+
+""""""
+input RangeInput {
+  """"""
+  gte: Int
+}
+
+""""""
+enum RatingType {
+  """"""
+  CANCEL
+
+  """"""
+  DISLIKE
+
+  """"""
+  LIKE
+}
+
+""""""
+type RemoveBookmarkPayload {
+  """"""
+  bookmarkable: Bookmarkable
+
+  """"""
+  menu: Menu @deprecated(reason: "Use `bookmarkable`.")
+}
+
+""""""
+input ReportCommentInput {
+  """"""
+  commentID: ID!
+
+  """"""
+  description: String
+}
+
+""""""
+type ReportCommentPayload {
+  """"""
+  comment: Comment
+}
+
+""""""
+input ReportPostInput {
+  """"""
+  description: String
+
+  """"""
+  postID: ID!
+}
+
+""""""
+type ReportPostPayload {
+  """"""
+  post: Post
+}
+
+""""""
+enum ReportReadStatus {
+  """"""
+  READ
+
+  """"""
+  UNREAD
+}
+
+""""""
+type RestorePostPayload {
+  """"""
+  post: Post
+}
+
+""""""
+type Tag {
+  """"""
+  createdAt: Date!
+
+  """"""
+  id: ID!
+
+  """"""
+  name: String!
+
+  """"""
+  updatedAt: Date!
+}
+
+""""""
+type TagConnection {
+  """"""
+  nodes: [Tag!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+type TagCreatePayload {
+  """"""
+  tag: Tag
+}
+
+""""""
+type TagDeleteManyPayload {
+  """"""
+  tags: [Tag!]!
+}
+
+""""""
+type TagDeletePayload {
+  """"""
+  tag: Tag
+}
+
+""""""
+input TagFilters {
+  """"""
+  q: String
+}
+
+""""""
+input TagInput {
+  """"""
+  name: String
+}
+
+""""""
+input TagOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: TagOrderField!
+}
+
+""""""
+enum TagOrderField {
+  """"""
+  CREATED_AT
+
+  """"""
+  ID
+
+  """"""
+  NAME
+
+  """"""
+  UPDATED_AT
+}
+
+""""""
+type TagUpdatePayload {
+  """"""
+  tag: Tag
+}
+
+""""""
+type Trash {
+  """"""
+  createdAt: Date!
+
+  """"""
+  description: String
+
+  """"""
+  id: ID!
+
+  """"""
+  ipAddrress: String
+
+  """"""
+  originModule: String
+
+  """"""
+  serializedObject: String
+
+  """"""
+  title: String
+
+  """"""
+  userID: Int
+}
+
+""""""
+type TrashConnection {
+  """"""
+  nodes: [Trash!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+type TrashCreatePayload {
+  """"""
+  trash: Trash
+}
+
+""""""
+input TrashInput {
+  """"""
+  createdAt: Date!
+
+  """"""
+  description: String
+
+  """"""
+  ipAddrress: String
+
+  """"""
+  originModule: String
+
+  """"""
+  serializedObject: String
+
+  """"""
+  title: String!
+
+  """"""
+  userID: Int
+}
+
+""""""
+type UnbanLogsPayLoad {
+  """"""
+  unbanLogs: [BanLog]
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+"""linkareer 전용. 이후 모듈화 할 때 제거될 것"""
+type User {
+  """"""
+  allowMessage: Boolean
+
+  """"""
+  banLog: BanLogConnection
+
+  """"""
+  email: String
+
+  """"""
+  id: ID!
+
+  """"""
+  isAdmin: Boolean
+
+  """"""
+  lastBanLog: BanLog
+
+  """"""
+  nickname: String
+
+  """"""
+  posts(orderBy: PostOrder, pagination: Pagination): PostConnection
+
+  """"""
+  profileImageURL: String
+
+  """"""
+  scrapCount: Int
+
+  """"""
+  username: String
+}
+
+""""""
+type UserConnection {
+  """"""
+  nodes: [User!]!
+
+  """"""
+  totalCount: Int!
+}
+
+""""""
+input UserFilters {
+  """"""
+  q: String
+}
+
+""""""
+input UserOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: UserOrderField!
+}
+
+""""""
+enum UserOrderField {
+  """"""
+  ID
+}
+
+""""""
+type UserScrap {
+  """"""
+  createdAt: Date
+
+  """"""
+  deletedAt: Date
+
+  """"""
+  externalID: String
+
+  """"""
+  id: ID!
+
+  """"""
+  listOrder: Int
+
+  """"""
+  post: Post
+
+  """"""
+  postID: ID!
+
+  """"""
+  userID: ID!
+}
+
+""""""
+input UserScrapOrder {
+  """"""
+  direction: OrderDirection!
+
+  """"""
+  field: UserScrapOrderField!
+}
+
+""""""
+enum UserScrapOrderField {
+  """"""
+  CREATED_AT
+
+  """"""
+  LIST_ORDER
+}

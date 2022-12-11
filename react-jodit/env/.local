@@ -1,0 +1,3 @@
+COMMUNITY_PROJECT_NODE_ENV=local
+COMMUNITY_PROJECT_API_URI=https://xen-api.lnkr.cc/graphql
+BABEL_ENV=development

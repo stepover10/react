@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="74ba8670-8934-47ee-806b-f0183872a328" name="변경" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app.components/table/Table.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app.hooks/useQueryFn.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/codegen.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app.modules/config/graphql.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app.components/table/__test__/__testData.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/test/query.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2EmX9TPwAkZopJ9Z8biencnmtlo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/app.components/__test__" />
+      <recent name="$PROJECT_DIR$/src/app.modules/config" />
+      <recent name="$PROJECT_DIR$/src/app.modules" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app.modules/config" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="74ba8670-8934-47ee-806b-f0183872a328" name="변경" comment="" />
+      <created>1663201581647</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663201581647</updated>
+      <workItem from="1663201582802" duration="123000" />
+      <workItem from="1663201720870" duration="32000" />
+      <workItem from="1663201763101" duration="18000" />
+      <workItem from="1663201798483" duration="7802000" />
+      <workItem from="1663216293855" duration="5999000" />
+      <workItem from="1663227036980" duration="3848000" />
+      <workItem from="1663230906078" duration="221000" />
+      <workItem from="1663231140463" duration="357000" />
+      <workItem from="1663231507800" duration="341000" />
+      <workItem from="1663231860602" duration="440000" />
+      <workItem from="1663232311079" duration="283000" />
+      <workItem from="1663232604117" duration="622000" />
+      <workItem from="1663285480061" duration="2835000" />
+      <workItem from="1663289143795" duration="804000" />
+      <workItem from="1663289960836" duration="7370000" />
+      <workItem from="1663299526184" duration="8420000" />
+      <workItem from="1665707899641" duration="19246000" />
+      <workItem from="1665965186520" duration="10757000" />
+      <workItem from="1666053547893" duration="3342000" />
+      <workItem from="1666082934298" duration="859000" />
+      <workItem from="1666137680075" duration="9899000" />
+      <workItem from="1666223902517" duration="9730000" />
+      <workItem from="1666571383917" duration="983000" />
+      <workItem from="1666828479060" duration="18545000" />
+      <workItem from="1667174442036" duration="1198000" />
+      <workItem from="1667194171265" duration="6951000" />
+      <workItem from="1667261384673" duration="12303000" />
+      <workItem from="1667347213306" duration="10688000" />
+      <workItem from="1667432296370" duration="223000" />
+      <workItem from="1667953106470" duration="3702000" />
+      <workItem from="1667960719024" duration="205000" />
+      <workItem from="1667984163767" duration="197000" />
+      <workItem from="1668646117228" duration="3933000" />
+      <workItem from="1668659799415" duration="6226000" />
+      <workItem from="1668729073312" duration="8000" />
+      <workItem from="1668732844641" duration="5207000" />
+      <workItem from="1668995495398" duration="2425000" />
+      <workItem from="1670341915692" duration="242000" />
+      <workItem from="1670721660967" duration="64000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

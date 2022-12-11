@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "pure": true,
+        "fileName": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ]
+  ],
+  "presets": [
+    "next/babel"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-remove-console"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "product COMMUNITY_PROJECT": {
+      "includes": [
+        "./src/app.modules/config/scheme.graphql"
+      ]
+    }
+  }
+}
